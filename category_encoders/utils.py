@@ -61,7 +61,6 @@ def convert_input(X, columns=None, deep=False):
             else:
                 raise ValueError('Unexpected input type: %s' % (str(type(X))))
 
-            X = X.apply(lambda x: pd.to_numeric(x, errors='ignore'))
     elif deep:
         X = X.copy(deep=True)
 
